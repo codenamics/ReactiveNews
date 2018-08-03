@@ -1,0 +1,20 @@
+.navbar {
+  border-bottom: 1px solid #33333317;
+  animation-name: fromBottom;
+  animation-duration: 1s;
+}
+
+.nav-item {
+  padding-right: 15px;
+}
+
+.nav-link {
+  color: #33333394 !important;
+  transition: all .3s
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: black !important;
+  border-bottom: 2px solid red
+}
