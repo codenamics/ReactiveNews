@@ -38,4 +38,5 @@ $ npm run build
 
 ```
 https://newsapi.org "Powered by News API"
+//Application built for learning purpose
 
