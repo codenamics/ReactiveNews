@@ -1,14 +1,41 @@
-MovieSearch-App
-Application build to search movies.
+# ReactiveNews
 
-Main Technologies
-JavaScript ES5/ES6/ES7 Async/Await/Fetch
-API
-SASS (FlexBox, CSS Grid)
-RWD
-Setup
+React app, featching news from NewsAPI. 
+
+## Main Technologies
+
+* [x] **JavaScript ES5/ES6**
+* [x] **React/Redux**
+* [x] **Webpack 4**
+* [x] **NewsAPI**
+* [x] **SCSS/Bootstrap 4**
+
+
+### Setup
+
+```bash
 $ git clone or download
+```
+
 Go to project direction
 
-Open index.html
-and that's it!
+Install dependencies
+
+```bash
+$ npm install
+
+```
+Run dev
+
+```bash
+$ npm start
+
+```
+Run build
+
+```bash
+$ npm run build
+
+```
+https://newsapi.org "Powered by News API"
+
