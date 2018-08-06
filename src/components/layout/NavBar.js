@@ -29,7 +29,7 @@ class NavBar extends Component {
                 </Link>{" "}
               </li>{" "}
               <li className="nav-item">
-                <Link to="/sport" className="nav-link">
+                <Link to="/espn" className="nav-link">
                   Sports{" "}
                 </Link>{" "}
               </li>{" "}

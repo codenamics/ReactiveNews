@@ -1,14 +1,14 @@
 import React, { Component } from "react"
 import "../layout/NewsGrid.scss"
 import Grid from "../layout/Grid"
-
 import { connect } from "react-redux"
-import { getHealth } from "../../actions/newsActions"
+import { getNews } from "../../actions/newsActions"
 import PropTypes from "prop-types"
 
 class Health extends Component {
   componentDidMount() {
-    this.props.getHealth()
+    const { health } = this.props
+    this.props.getNews(health)
   }
   render() {
     const { news } = this.props
@@ -30,7 +30,7 @@ class Health extends Component {
 
 Health.propTypes = {
   news: PropTypes.array.isRequired,
-  getHealth: PropTypes.func.isRequired,
+  getNews: PropTypes.func.isRequired,
 }
 const mapStateToProps = state => ({
   news: state.news.news,
@@ -38,6 +38,6 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   {
-    getHealth,
+    getNews,
   }
 )(Health)

@@ -1,6 +1,1 @@
-export const GET_BUSINESS = 'GET_NEWS'
-export const GET_ENT = 'GET_ENT'
-export const GET_SPORT = 'GET_SPORT'
-export const GET_HEALTH = 'GET_HEALTH'
-export const GET_SCIENCE = 'GET_SCIENCE'
-export const GET_TECH = 'GET_TECH'
+export const GET_NEWS = 'GET_NEWS'

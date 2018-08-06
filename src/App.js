@@ -20,13 +20,43 @@ class App extends React.Component {
           <div>
             <NavBar />
             <Switch>
-              <Route exact path="/" component={Business} />
-              <Route exact path="/business" component={Business} />
-              <Route exact path="/sport" component={ESPN} />
-              <Route exact path="/entertainment" component={Entertainment} />
-              <Route exact path="/health" component={Health} />
-              <Route exact path="/science" component={Science} />
-              <Route exact path="/tech" component={Tech} />
+              <Route
+                exact
+                path="/"
+                render={props => <Business business="business" {...props} />}
+              />
+              <Route
+                exact
+                path="/business"
+                render={props => <Business business="business" {...props} />}
+              />
+              <Route
+                exact
+                path="/espn"
+                render={props => <ESPN sport="sport" {...props} />}
+              />
+              <Route
+                exact
+                path="/entertainment"
+                render={props => (
+                  <Entertainment entertainment="entertainment" {...props} />
+                )}
+              />
+              <Route
+                exact
+                path="/health"
+                render={props => <Health health="health" {...props} />}
+              />
+              <Route
+                exact
+                path="/science"
+                render={props => <Science science="science" {...props} />}
+              />
+              <Route
+                exact
+                path="/tech"
+                render={props => <Tech technology="technology" {...props} />}
+              />
             </Switch>
           </div>
         </Router>

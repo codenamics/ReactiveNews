@@ -3,10 +3,11 @@ import "../layout/NewsGrid.scss"
 import Grid from "../layout/Grid"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { getScience } from "../../actions/newsActions"
+import { getNews } from "../../actions/newsActions"
 class Science extends Component {
   componentDidMount() {
-    this.props.getScience()
+    const { science } = this.props
+    this.props.getNews(science)
   }
   render() {
     const { news } = this.props
@@ -28,7 +29,7 @@ class Science extends Component {
 
 Science.propTypes = {
   news: PropTypes.array.isRequired,
-  getScience: PropTypes.func.isRequired,
+  getNews: PropTypes.func.isRequired,
 }
 
 const mapStateToProps = state => ({
@@ -37,6 +38,6 @@ const mapStateToProps = state => ({
 export default connect(
   mapStateToProps,
   {
-    getScience,
+    getNews,
   }
 )(Science)
