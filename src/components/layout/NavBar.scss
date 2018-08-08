@@ -6,6 +6,26 @@
 
 .nav-item {
   padding-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  input {
+    border: 1px solid #3333332d;
+    border-radius: 25px;
+    min-height: 35px;
+    padding-left: 10px
+  }
+}
+
+.input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.fa-search {
+  position: absolute;
+  right: 10px;
 }
 
 .nav-link {
@@ -17,4 +37,14 @@
 .nav-link:focus {
   color: black !important;
   border-bottom: 2px solid red
+}
+
+.search-input {
+  position: relative;
+}
+
+.flex-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

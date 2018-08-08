@@ -3,10 +3,18 @@ import { Link } from "react-router-dom"
 import "./NavBar.scss"
 
 class NavBar extends Component {
+  state = {
+    input: "",
+  }
+
+  searchInput = () => {
+    console.log("sss")
+  }
+
   render() {
     return (
-      <nav className="navbar navbar-expand-md">
-        <div className="container">
+      <nav className="navbar navbar-expand-lg">
+        <div className="container flex-nav">
           <a href="/" className="navbar-brand">
             <i className="fab fa-accusoft" />
           </a>
@@ -52,6 +60,12 @@ class NavBar extends Component {
                 <Link to="/tech" className="nav-link">
                   Tech{" "}
                 </Link>{" "}
+              </li>{" "}
+              <li className="nav-item">
+                <form className="input-box" onClick={this.searchInput}>
+                  <input type="text" />
+                  <i className="fas fa-search" />
+                </form>
               </li>{" "}
             </ul>{" "}
           </div>{" "}
