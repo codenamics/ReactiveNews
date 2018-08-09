@@ -8,6 +8,7 @@ import Entertainment from "./components/News/Entertainment"
 import Health from "./components/News/Health"
 import Science from "./components/News/Science"
 import Tech from "./components/News/Tech"
+import Search from "./components/News/Search"
 import { Provider } from "react-redux"
 import store from "./store"
 
@@ -41,7 +42,7 @@ class App extends React.Component {
                 render={props => (
                   <Entertainment entertainment="entertainment" {...props} />
                 )}
-              />
+              />{" "}
               <Route
                 exact
                 path="/health"
@@ -57,6 +58,7 @@ class App extends React.Component {
                 path="/tech"
                 render={props => <Tech technology="technology" {...props} />}
               />
+              <Route exact path="/search" component={Search} />
             </Switch>
           </div>
         </Router>

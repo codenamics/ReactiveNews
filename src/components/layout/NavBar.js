@@ -1,16 +1,23 @@
 import React, { Component } from "react"
 import { Link } from "react-router-dom"
 import "./NavBar.scss"
-
+import { searchNews } from "../../actions/newsActions"
+import { connect } from "react-redux"
+import { withRouter } from "react-router"
 class NavBar extends Component {
   state = {
     input: "",
   }
 
-  searchInput = () => {
-    console.log("sss")
+  valueInput = e => {
+    this.setState({
+      input: e.target.value,
+    })
   }
-
+  searchInput = () => {
+    const { input } = this.state
+    this.props.searchNews(input, this.props.history)
+  }
   render() {
     return (
       <nav className="navbar navbar-expand-lg">
@@ -62,9 +69,9 @@ class NavBar extends Component {
                 </Link>{" "}
               </li>{" "}
               <li className="nav-item">
-                <form className="input-box" onClick={this.searchInput}>
-                  <input type="text" />
-                  <i className="fas fa-search" />
+                <form className="input-box">
+                  <input type="text" onChange={this.valueInput} />
+                  <i className="fas fa-search" onClick={this.searchInput} />
                 </form>
               </li>{" "}
             </ul>{" "}
@@ -74,4 +81,10 @@ class NavBar extends Component {
     )
   }
 }
-export default NavBar
+
+export default withRouter(
+  connect(
+    null,
+    { searchNews }
+  )(NavBar)
+)
