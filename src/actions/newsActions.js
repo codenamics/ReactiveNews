@@ -13,7 +13,7 @@ export const getNews = news => dispatch => {
       })
     )
 }
-export const searchNews = (news, history) => dispatch => {
+export const searchNews = news => dispatch => {
   axios
     .get(
       `https://newsapi.org/v2/everything?q=${news}&sortBy=publishedAt&apiKey=5dba100e14914809983c32d8f26c3740`
@@ -24,5 +24,4 @@ export const searchNews = (news, history) => dispatch => {
         payload: res.data.articles,
       })
     )
-    .then(res => history.push("/search"))
 }

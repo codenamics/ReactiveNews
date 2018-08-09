@@ -1,7 +1,16 @@
+:root {
+  --nav-brd: #33333317;
+  --input-brd: #3333332d;
+  --hover-violet: #d40dee
+}
+
 .navbar {
-  border-bottom: 1px solid #33333317;
+  border-bottom: 1px solid var(--nav-brd);
   animation-name: fromBottom;
   animation-duration: 1s;
+  &-toggler-icon {
+    height: 20px;
+  }
 }
 
 .nav-item {
@@ -10,10 +19,15 @@
   justify-content: center;
   align-items: center;
   input {
-    border: 1px solid #3333332d;
+    border: 1px solid var(--input-brd);
     border-radius: 25px;
     min-height: 35px;
-    padding-left: 10px
+    padding-left: 15px;
+    outline: none;
+    transition: all .5s;
+    &:focus {
+      border: 1px solid var(--hover-violet);
+    }
   }
 }
 
@@ -21,11 +35,13 @@
   position: relative;
   display: flex;
   align-items: center;
-}
-
-.fa-search {
-  position: absolute;
-  right: 10px;
+  outline: none;
+  .fa-search {
+    position: absolute;
+    right: 13px;
+    top: 6px;
+    font-size: 22px;
+  }
 }
 
 .nav-link {
@@ -36,11 +52,7 @@
 .nav-link:hover,
 .nav-link:focus {
   color: black !important;
-  border-bottom: 2px solid red
-}
-
-.search-input {
-  position: relative;
+  border-bottom: 2px solid var(--hover-violet)
 }
 
 .flex-nav {

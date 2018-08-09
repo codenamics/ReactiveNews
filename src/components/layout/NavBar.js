@@ -16,7 +16,7 @@ class NavBar extends Component {
   }
   searchInput = () => {
     const { input } = this.state
-    this.props.searchNews(input, this.props.history)
+    this.props.searchNews(input)
   }
   render() {
     return (
@@ -65,13 +65,19 @@ class NavBar extends Component {
               </li>{" "}
               <li className="nav-item">
                 <Link to="/tech" className="nav-link">
-                  Tech{" "}
-                </Link>{" "}
+                  Tech
+                </Link>
               </li>{" "}
               <li className="nav-item">
                 <form className="input-box">
-                  <input type="text" onChange={this.valueInput} />
-                  <i className="fas fa-search" onClick={this.searchInput} />
+                  <input
+                    type="text"
+                    placeholder="Search "
+                    onChange={this.valueInput}
+                  />
+                  <Link to="/search">
+                    <i className="fas fa-search" onClick={this.searchInput} />
+                  </Link>
                 </form>
               </li>{" "}
             </ul>{" "}
