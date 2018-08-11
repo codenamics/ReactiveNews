@@ -4,20 +4,8 @@ import "./NavBar.scss"
 import { searchNews } from "../../actions/newsActions"
 import { connect } from "react-redux"
 import { withRouter } from "react-router"
-class NavBar extends Component {
-  state = {
-    input: "",
-  }
 
-  valueInput = e => {
-    this.setState({
-      input: e.target.value,
-    })
-  }
-  searchInput = () => {
-    const { input } = this.state
-    this.props.searchNews(input)
-  }
+class NavBar extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg">
@@ -69,17 +57,10 @@ class NavBar extends Component {
                 </Link>
               </li>{" "}
               <li className="nav-item">
-                <form className="input-box">
-                  <input
-                    type="text"
-                    placeholder="Search "
-                    onChange={this.valueInput}
-                  />
-                  <Link to="/search">
-                    <i className="fas fa-search" onClick={this.searchInput} />
-                  </Link>
-                </form>
-              </li>{" "}
+                <Link to="/search" className="nav-link">
+                  <button className="btn btn-default btn-danger">Search</button>
+                </Link>
+              </li>
             </ul>{" "}
           </div>{" "}
         </div>{" "}

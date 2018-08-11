@@ -39,5 +39,7 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getNews }
+  {
+    getNews,
+  }
 )(ESPN)

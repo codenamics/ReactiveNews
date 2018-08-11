@@ -10,12 +10,13 @@ class Search extends Component {
   }
   render() {
     const { news } = this.props
+    console.log(news)
     const { id } = this.state
     return (
       <div className="container">
         <div className="headline">
           <h1> Top headlines </h1>{" "}
-          <p> The latest and best headlines articles </p>
+          <p> The latest and best headlines articles </p>{" "}
         </div>{" "}
         <div className="grid">
           {" "}
