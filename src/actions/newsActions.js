@@ -16,10 +16,10 @@ export const getNews = news => dispatch => {
       })
     )
 }
-export const searchNews = (news, from) => dispatch => {
+export const searchNews = (news, dateFrom, dateTo) => dispatch => {
   axios
     .get(
-      `https://newsapi.org/v2/everything?q=${news}&to=${from}&sortBy=popularity&language
+      `https://newsapi.org/v2/everything?q=${news}&from=${dateFrom}&to=${dateTo}&sortBy=popularity&language
 =en&apiKey=5dba100e14914809983c32d8f26c3740`
     )
     .then(res =>

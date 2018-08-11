@@ -102,3 +102,10 @@ a {
     text-decoration: none;
   }
 }
+
+.react-datepicker__input-container,
+.react-datepicker-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}

@@ -57,7 +57,7 @@ class NavBar extends Component {
                 </Link>
               </li>{" "}
               <li className="nav-item">
-                <Link to="/search" className="nav-link">
+                <Link to="/search">
                   <button className="btn btn-search">Search</button>
                 </Link>
               </li>

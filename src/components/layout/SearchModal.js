@@ -6,54 +6,78 @@ import { searchNews } from "../../actions/newsActions"
 
 import "react-datepicker/src/stylesheets/datepicker.scss"
 class SearchModal extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      input: "",
-      date: "",
-    }
+  state = {
+    input: "",
+    dateFrom: "",
+    dateTo: "",
   }
+
   valueInput = e => {
     this.setState({
       input: e.target.value,
     })
   }
-  handleChange = date => {
-    const valueOfInput = date.format("YYYY-MM-DD")
+  handleChangeDateFrom = date => {
+    const valueOfInputFrom = date.format("YYYY-MM-DD")
     this.setState({
-      date: valueOfInput,
+      dateFrom: valueOfInputFrom,
+    })
+  }
+  handleChangeDateTo = date => {
+    const valueOfInputTo = date.format("YYYY-MM-DD")
+    this.setState({
+      dateTo: valueOfInputTo,
     })
   }
   searchInput = () => {
-    const { input, date } = this.state
-    this.props.searchNews(input, date)
-    console.log(this.state.date, this.state.input)
+    const { input, dateFrom, dateTo } = this.state
+    this.props.searchNews(input, dateFrom, dateTo)
+    console.log(this.state.dateFrom, this.state.dateTo, this.state.input)
   }
   render() {
     return (
-      <div className="container-fluid">
+      <div className="container mt-5">
         <div className="row">
-          <div className="col-6 mx-auto">
-            <div className="card">
-              <div className="card-body">
-                <form className="input-box form-group">
+          <div className="col-lg-12 mx-auto">
+            <div className="col-lg-6 col-sm-12 mx-auto">
+              <div className="headline">
+                <h1> Search for news </h1>{" "}
+                <p> Choose date range which you would like to see </p>{" "}
+              </div>
+              <form>
+                <div class="form-group">
                   <input
                     className="form-control"
                     type="text"
-                    placeholder="Search "
+                    placeholder="Type what you would like to search"
                     onChange={this.valueInput}
                   />
+                </div>
+                <div class="form-group">
                   <DatePicker
+                    placeholderText="Date from"
                     className="form-control"
                     dateFormat="YYYY/MM/DD"
-                    onChange={this.handleChange}
+                    onChange={this.handleChangeDateFrom}
                     onSelect={this.handleSelect}
                   />
-                  <Link to="/results">
-                    <i className="fas fa-search" onClick={this.searchInput} />
-                  </Link>
-                </form>
-              </div>
+                  <DatePicker
+                    placeholderText="Date to"
+                    className="form-control mt-3"
+                    dateFormat="YYYY/MM/DD"
+                    onChange={this.handleChangeDateTo}
+                    onSelect={this.handleSelect}
+                  />
+                </div>
+                <Link to="/results">
+                  <button
+                    className="btn btn-primary btn-block btn-outline-secondary"
+                    onClick={this.searchInput}
+                  >
+                    Search
+                  </button>
+                </Link>
+              </form>
             </div>
           </div>
         </div>
