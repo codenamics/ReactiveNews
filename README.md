@@ -1,6 +1,6 @@
 # ReactiveNews
 
-React app, featching news from NewsAPI. 
+React app, featching news from NewsAPI. With search functionality, also by range of dates
 
 ## Main Technologies
 
