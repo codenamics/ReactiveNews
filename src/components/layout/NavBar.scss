@@ -13,6 +13,13 @@
   }
 }
 
+.btn-search {
+  background: transparent;
+  border: 1px solid var(--input-brd);
+  border-radius: 25px;
+  padding: 7px 42px;
+}
+
 .nav-item {
   padding-right: 15px;
   display: flex;

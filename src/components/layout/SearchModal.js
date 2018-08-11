@@ -36,13 +36,15 @@ class SearchModal extends Component {
           <div className="col-6 mx-auto">
             <div className="card">
               <div className="card-body">
-                <form className="input-box">
+                <form className="input-box form-group">
                   <input
+                    className="form-control"
                     type="text"
                     placeholder="Search "
                     onChange={this.valueInput}
                   />
                   <DatePicker
+                    className="form-control"
                     dateFormat="YYYY/MM/DD"
                     onChange={this.handleChange}
                     onSelect={this.handleSelect}
