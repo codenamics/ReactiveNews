@@ -1,7 +1,7 @@
 {
-  "author": "DaftCode",
+  "author": "Codenamics",
   "license": "MIT",
-  "name": "daftcode-react-starter",
+  "name": "reactnews",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -17,14 +17,12 @@
     "prop-types": "^15.6.1",
     "react": "^16.3.0",
     "react-datepicker": "^1.6.0",
-
     "react-dom": "^16.3.0",
     "react-hot-loader": "^4.0.1",
     "react-redux": "^5.0.7",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-thunk": "^1.0.0",
-
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
     "uuid": "^3.3.2"
