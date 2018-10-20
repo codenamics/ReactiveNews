@@ -3,7 +3,7 @@
 
 # Logs
 npm-debug.log*
-package-lock
+package-lock.json
 # Dependency directories
 node_modules
 
