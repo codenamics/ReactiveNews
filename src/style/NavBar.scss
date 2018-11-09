@@ -1,12 +1,12 @@
 :root {
   --nav-brd: #33333317;
   --input-brd: #3333332d;
-  --hover-violet: #d40dee
+  --hover-violet: #d40dee;
 }
 
 .navbar {
   border-bottom: 1px solid var(--nav-brd);
-  height: 70px;
+  min-height: 70px;
   animation-name: fromBottom;
   animation-duration: 1s;
 
@@ -34,7 +34,7 @@
     min-height: 35px;
     padding-left: 15px;
     outline: none;
-    transition: all .5s;
+    transition: all 0.5s;
 
     &:focus {
       border: 1px solid var(--hover-violet);
@@ -52,13 +52,13 @@
 
 .nav-link {
   color: #33333394 !important;
-  transition: all .3s
+  transition: all 0.3s;
 }
 
 .nav-link:hover,
 .nav-link:focus {
   color: black !important;
-  border-bottom: 2px solid var(--hover-violet)
+  border-bottom: 2px solid var(--hover-violet);
 }
 
 .flex-nav {
